@@ -16,6 +16,12 @@
   networking.firewall.allowedTCPPorts = [ 53317 ]; # LocalSend
   networking.firewall.allowedUDPPorts = [ 53317 ];
 
+  # --- Bluetooth ---
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+
+
   # --- User Configuration ---
   users.users."dav" = {
     isNormalUser = true;
@@ -106,6 +112,7 @@
     seahorse
     libsecret
     firefox
+    kdePackages.dolphin
     hyprpolkitagent
     
     # Media & Entertainment
